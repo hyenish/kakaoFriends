@@ -1,0 +1,456 @@
+@charset "UTF-8";
+
+body{}
+.ico_friends { 
+    display: block;
+    background: url(../img/ico_friends.png) no-repeat 0 0 / 700px 800px;
+    font-size: 1px; color:transparent; 
+    overflow: hidden;
+}
+.ico_dot{
+    display: inline-block;
+    width: 10px; height: 10px;
+    background: #ec4217;
+    font-size: 1px; color:transparent; line-height: 0; 
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+#container {
+    max-width: 640px; min-width: 270px;
+    height: 2000px;
+    margin: 0 auto;
+    background-image:linear-gradient(to bottom, #fff 40%, #e071d1 75%, #ec4217);
+}
+
+header { 
+    position: fixed; 
+    top: 0; left: 0; right: 0;
+    max-width: 640px; min-width: 270px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+h1 { 
+    text-align: center; 
+    height: 46px; line-height: 46px; }
+h1 a { 
+    display: inline-block;
+    width: 147px; height: 24px;
+    background-image: url('../img/logo_kakaofriends.png');
+    background-size: 147px 24px;
+}
+h1 a span { display: none; }
+
+.top_left .ico_gnb_menu { 
+    width: 24px; height: 24px;
+    background-position: -520px -60px;
+}
+
+.top_left, .top_right { 
+    position: absolute; 
+    top: 6px;
+}
+
+.top_left { left: 12px; }
+.top_left > button { padding: 5px; }
+.top_left .ico_dot {
+    position: absolute;
+    top: 5px; right: 3px;
+}
+.top_right { right: 12px; }
+.top_right > button { padding: 5px; }
+
+.top_right .ico_search, .top_right .ico_global { 
+    width: 24px; height: 24px;
+}
+.top_right .ico_search { background-position: -40px -20px;}
+.top_right .ico_global { background-position: -440px -60px;}
+
+nav { border-bottom: 1px solid #ccc;}
+.list_tab { display: flex;}
+.list_tab li { 
+    flex: 1;
+    text-align: center;
+}
+.list_tab li a { 
+    display: block; 
+    line-height: 43px;
+}
+.list_tab li a>span{
+    position: relative;
+}
+nav .ico_dot {
+    position: absolute;
+    top: 0px; right: -10px;
+}
+.list_tab li a.on{
+    font-weight: bold;
+}
+.list_tab li a.on::after{
+    display: block; content: "";
+    width: 100%; height: 4px;
+    background-color: #000;
+    position: relative;
+    bottom: -1px;
+}
+
+/********** main **********/
+main { padding-top: 95px;}
+
+article {}
+article .box { padding: 20px;}
+
+.article_header {padding-bottom: 15px;}
+.article_header .profile {
+    float: left;
+    display: inline-block;
+    width: 40px; height: 40px;
+    background: url('../img/character/character_20220531165306_96.png') no-repeat 0 0 / 40px 40px;
+    text-indent: -9999px; /*화면 저 멀리 보내기*/
+    border-radius: 15px;
+}
+.article_header .info {padding-left: 46px;}
+.article_header .info strong { }
+.article_header .info .txt_time {
+    display: block;
+    font-size: 13px;
+    color: #808080;
+    line-height: 15px;
+}
+
+.article_con {}
+.article_con img { 
+    width: 100%;
+    border-radius: 15px;
+}
+
+/********** dark **********/
+.dark{
+    display: none;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+/********** gnb **********/
+#gnb {  
+    position: fixed; 
+    top: 0; 
+    left: -304px; bottom: 0;
+    width: 304px; 
+    background:#fff;
+    overflow: hidden;/*17(스크롤바)만큼 넓어진 너비를 감추기*/
+    z-index: 150;
+}
+#gnb .inner {
+    /*gnb바 스크롤만들기 3단계*/
+    width: 304px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px; /*스크롤바 너비*/
+    box-sizing: content-box;
+}
+
+.info_user { 
+    padding:35px 6px 24px 24px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.info_login {
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+.info_inquire {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.info_user .ico_arrow_right { 
+    display: inline-block;
+    width: 16px; height: 16px;
+    background-position: -320px 0;
+    vertical-align: top;
+    margin-top: 4px;
+}
+
+.list_menu { padding: 20px 0;}
+.list_menu > li {}
+.list_menu .btn_menu {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    text-align: left;
+    padding: 0 10px 0 24px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.line::after { 
+    display: block;
+    content: "";
+    width: 304px; height: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.list_menu .ico_dot { 
+    position: relative;
+    bottom: 12px;
+}
+.list_menu .ico_arrow {
+    float: right;
+    display: inline-block;
+    width: 16px; height: 16px;
+    background-position: -360px 0;
+    margin-top: 15px;
+}
+.list_menu .ico_arrow.on{
+    background-position: -340px 0;
+}
+
+
+/************ 캐릭터*************/
+.list_sub_wrap { display: none; }
+.list_charactor {
+    padding: 16px 0 16px 14px;
+    font-size: 0px; 
+    /*자식요소 inline-block 사용시 여백을 막아주는 방법*/
+}
+.list_charactor li {
+    display: inline-block;
+    width: 25%;
+    padding-bottom: 20px;
+}
+.list_charactor li a {
+    display: block;
+    padding: 0 10px;
+    color: #808080;
+}
+
+.img_charactor {
+    display: block;
+    width: 100%;
+    padding-top: 100%; /*가로길이랑 같이 패딩이 생김*/
+    background: no-repeat 50% 50% / cover;
+    border-radius: 50%;
+}
+.txt_charactor {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 8px;
+    white-space: nowrap;
+    letter-spacing: -1px;
+}
+/*** 캐릭터 이미지 ***/
+.charactor01 .img_charactor {
+    background-image: url(../img/character/character_20220531165251_96.png);
+}
+.charactor02 .img_charactor{
+    background-image: url(../img/character/character_20220531165311_96.png);
+}
+.charactor03 .img_charactor{
+    background-image: url(../img/character/character_20220531165333_96.png);
+}
+.charactor04 .img_charactor{
+    background-image: url(../img/character/character_20220531165353_96.png);
+}
+.charactor05 .img_charactor{
+    background-image: url(../img/character/character_20220531165418_96.png);
+}
+.charactor06 .img_charactor{
+    background-image: url(../img/character/character_20220531165457_96.png);
+}
+.charactor07 .img_charactor{
+    background-image: url(../img/character/character_20220818170304_96.png);
+}
+.charactor08 .img_charactor{
+    background-image: url(../img/character/character_20220818170326_off.png);
+}
+.charactor09 .img_charactor{
+    background-image: url(../img/character/character_20220902083300_5c8d0d8b4a0746899f02bb00a8164e5e.png);
+}
+.charactor10 .img_charactor{
+    background-image: url(../img/character/character_20220902083333_88bc2a0c82404615a3fcb5d32d1b401d.png);
+}
+.charactor11 .img_charactor{
+    background-image: url(../img/character/character_20220902083414_e1462a8287ba434c842e2efbd6339586.png);
+}
+.charactor12 .img_charactor{
+    background-image: url(../img/character/character_20220902083442_5d59dc403fe040939081f935c0f43fe2.png);
+}
+.charactor13 .img_charactor{
+    background-image: url(../img/character/character_20220902083512_12d5ec0b5bdb496f95ae11e584a8db75.png);
+}
+.charactor14 .img_charactor{
+    background-image: url(../img/character/character_20220902083542_803584d7a6d84158afc10667f195f750.png);
+}
+.charactor15 .img_charactor{
+    background-image: url(../img/character/character_20220902083613_247109ed8e0b493daeb933da4323ed73.png);
+}
+.charactor16 .img_charactor{
+    background-image: url(../img/character/character_20220902083650_65360bc6749e491899abb72f0fc40426.png);
+}
+.charactor17 .img_charactor{
+    background-image: url(../img/character/character_20220531165949_OFF.jpg);
+}
+
+/*** 캐릭터 이미지 HOVER ***/
+.charactor01:hover .img_charactor {
+    background-image: url(../img/character/character_20220531165245_96.png);
+}
+.charactor02:hover .img_charactor{
+    background-image: url(../img/character/character_20220531165306_96.png);
+}
+.charactor03:hover .img_charactor{
+    background-image: url(../img/character/character_20220531165329_96.png);
+}
+.charactor04:hover .img_charactor{
+    background-image: url(../img/character/character_20220531165349_96.png);
+}
+.charactor05:hover .img_charactor{
+    background-image: url(../img/character/character_20220531165413_96.png);
+}
+.charactor06:hover .img_charactor{
+    background-image: url(../img/character/character_20220531165452_96.png);
+}
+.charactor07:hover .img_charactor{
+    background-image: url(../img/character/character_20220818170255_96.png);
+}
+.charactor08:hover .img_charactor{
+    background-image: url(../img/character/character_20220818170318_on.jpg);
+}
+.charactor09:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083247_70d4ad6bf6b140ad8f25f504b9357839.png);
+}
+.charactor10:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083318_93d4f8e2cf6145db9042d9e98df58bdb.png);
+}
+.charactor11:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083403_f7813e08dae94706889e0e27f5191cd7.png);
+}
+.charactor12:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083431_e04e2bf073d64bc8bb8fa3eda6122459.png);
+}
+.charactor13:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083501_08a2d33d32b24d1f9fedcd8fc0a1d2fe.png);
+}
+.charactor14:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083530_d9aa5fd9b9e14fb3b52a8b06f44c1bc1.png);
+}
+.charactor15:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083602_7990b9465a544d57b8ddbed19d5223b4.png);
+}
+.charactor16:hover .img_charactor{
+    background-image: url(../img/character/character_20220902083633_3a20f821a280484e9db0486c961966e1.png);
+}
+.charactor17:hover .img_charactor{
+    background-image: url(../img/character/character_20220531165946_ON.jpg);
+}
+
+/************ 카테고리 *************/
+.list_category {
+    padding: 8px 10px 8px 24px;
+    font-size: 0; 
+    /*
+    inline-block여백 지우기 방식
+    -inline-block 부모한테 font-size: 0 넣기
+    */
+}
+.list_category li {
+    display: inline-block;
+    width: 50%;
+}
+.list_category li a {
+    display: block;
+    font-size: 15px; 
+    /*inline-block 여백지우기로 사라진 글씨 되살리기용*/
+    padding: 12px 0;
+    color: #808080;
+}
+
+/************ 카톡추가 배너 *************/
+.banner { }
+.banner a {
+    display: block;
+    padding: 0px 14px;
+}
+.banner a img { 
+    width: 100%;
+    border-radius: 8px;
+}
+
+/************ 맨 아래 로그인 *************/
+.login {margin-bottom: 30px;}
+.login a {
+    display: block;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    color: #808080;
+}
+.login .ico_gnb_lock {
+    display: inline-block;
+    width: 24px; height: 24px;
+    background-position: -560px -20px;
+    vertical-align: top;
+    margin-top: -2px;
+}
+
+/************ 팝업 로그인창 *************/
+.login_popup {
+    display: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 310px;
+    background-color: #fff;
+    border-radius: 16px; /* 8배수*/
+    text-align: center;
+    padding: 45px;
+    z-index: 110;
+}
+.login_popup img { width: 120px; }
+.login_popup strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.login_popup p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.login_popup .btn_kakao {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffeb00;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.login_popup .ico_kakao {
+    display: inline-block;
+    width: 24px; height: 24px;
+    background-position: -480px -20px;
+    vertical-align: middle;
+    margin: -1px 3px 0 0;
+}
+.btn_close{
+    position: absolute;
+    top: 15px; right: 15px;
+}
+.btn_close .ico_close {
+    width: 24px; height: 24px;
+    background-position: 0 -20px;
+    opacity: 0.2;
+}
